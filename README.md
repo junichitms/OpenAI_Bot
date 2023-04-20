@@ -18,7 +18,7 @@ Azure OpenAI Serviceとやり取りした内容や使ったトークン数を履
 - .NET SDK version 6.0
 - Azure App Serviceを作成。(.NET6 / Windows環境)　デプロイ時に作成しても可。
 - Azure OpenAI Serviceを作成し、キーとエンドポイントから[キー1]と[エンドポイント]をメモしておきます。
-![OpenAI screen](docs/AOAI.jpg)
+![OpenAI screen](OpenAI_Bot/docs/AOAI.jpg)
 次に、モデルデプロイから、+作成をクリックし　gpt-35-turboをデプロイします。[モデルデプロイ名] をメモしておきます。
 ![OpenAI screen](docs/AOAI1.jpg)
 - Azure Cosmos DB(Core SQL AOI)を作成し、データベースを作成。
