@@ -20,23 +20,23 @@ Azure OpenAI Serviceとやり取りした内容や使ったトークン数を履
 - Azure OpenAI Serviceを作成し、キーとエンドポイントから[キー1]と[エンドポイント]をメモしておきます。
 ![OpenAI screen](OpenAI_Bot/docs/AOAI.jpg)
 次に、モデルデプロイから、+作成をクリックし　gpt-35-turboをデプロイします。[モデルデプロイ名] をメモしておきます。
-![OpenAI screen](docs/AOAI1.jpg)
+![OpenAI screen](OpenAI_Bot/docs/AOAI1.jpg)
 - Azure Cosmos DB(Core SQL AOI)を作成し、データベースを作成。
 データエクスプローラーから[New Database]で、作成しデータベース名をメモしておきます。
-![CosmosDB screen](docs/cosmos1.jpg)
+![CosmosDB screen](OpenAI_Bot/docs/cosmos1.jpg)
 次に、キーから[URI]と[プライマリキー]をメモしておきます。
-![CosmosDB screen](docs/cosmos2.jpg)
+![CosmosDB screen](OpenAI_Bot/docs/cosmos2.jpg)
 - Azure Botを作成します。
-![Bot screen](docs/bot1.jpg)
+![Bot screen](OpenAI_Bot/docs/bot1.jpg)
 構成から、[ボットタイプ] , [アプリテナントID] ,[Microsoft App ID]をメモしておきます。
 次に、Microsft App ID(パスワードの管理)から、パスワードの管理をクリックします。
-![Bot screen](docs/bot2.jpg)
+![Bot screen](OpenAI_Bot/docs/bot2.jpg)
 +新しいクライアントシークレットをクリックし、シークレットを追加し[値]をメモしておきます。
-![Bot screen](docs/bot3.jpg)
+![Bot screen](OpenAI_Bot/docs/bot3.jpg)
 Azure Botのチャネルから、Direct Lineをクリックします。
-![Bot screen](docs/bot6.jpg)
+![Bot screen](OpenAI_Bot/docs/bot6.jpg)
 Default Siteをクリックし、[秘密キー]をメモしておきます。(上段下段どちらでも可)
-![Bot screen](docs/bot7.jpg)
+![Bot screen](OpenAI_Bot/docs/bot7.jpg)
 
 
 ### 構築
@@ -62,16 +62,16 @@ Default Siteをクリックし、[秘密キー]をメモしておきます。(�
     ContainerId             :  Cosmos DBのコンテナ名。利用環境で作っていなくても、実行時に作成されます。例: BotState
     ```
 1. wwwrootからdefault.htmを開きます。メモしたAzure Bot　Direct Lineの[秘密キー]を、token: にセットします。
-![VS screen](docs/vs1.jpg)
+![VS screen](OpenAI_Bot/docs/vs1.jpg)
 1. Azure App Serviceにデプロイします。以下は、Visual Studioからの発行例です。
-![VS screen](docs/vs.jpg)
+![VS screen](OpenAI_Bot/docs/vs.jpg)
 1. Azure Portalの Azure Botの画面から、構成を開きメッセージングエンドポイントに以下をセットします。
      
     App ServiceにデプロイしたURL/api/messages
-    ![Bot screen](docs/bot5.jpg)
+    ![Bot screen](OpenAI_Bot/docs/bot5.jpg)
 
 Webチャットでテストから、動作するか確認できます。
-![Cosmos screen](docs/bot8.jpg)
+![Cosmos screen](OpenAI_Bot/docs/bot8.jpg)
 
 
 ### Web Chat画面
@@ -80,17 +80,17 @@ Webチャットでテストから、動作するか確認できます。
 このBotは、会話履歴を保持し、会話を継続していきます。履歴をリセットしたい場合は、resetを入力すると履歴がリセットされます。(リセットしないで、継続するとトークン数がオーバーする可能性もあるので、適宜resetして下さい。)
 上記のSystemメッセージを変更して、どのようなアシスタントとしてボットを提供するかいろいろと試して下さい。
 また、default.htmやcssを変更することで、画面をカスタマイズ可能です。
-![Bot screen](docs/web.jpg)
+![Bot screen](OpenAI_Bot/docs/web.jpg)
 
 
 ### 履歴
 Azure OpenAI Serviceとのやり取りや使用したトークン数はCosmos DBから参照できます。
 Bot Frameworkを使うことで、Cosmos DBを宣言するだけで履歴を残すことができるメリットがあります。
-![Bot screen](docs/cosmos3.jpg)
+![Bot screen](OpenAI_Bot/docs/cosmos3.jpg)
 
 ### その他のチャネルからの利用
 Azure Portalの Azure Botの画面から、チャネルを開き、有効にすることで様々なチャネルに対応することが可能です。
-![Bot screen](docs/ch.jpg)
+![Bot screen](OpenAI_Bot/docs/ch.jpg)
 
 ### 面積
 こちらは、デモサンプルの為、何の保証も提供しておりませんのでご了承ください。
