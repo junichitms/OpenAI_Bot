@@ -21,8 +21,8 @@ Azure OpenAI Serviceとやり取りした内容や使ったトークン数を履
 ![OpenAI screen](OpenAI_Bot/docs/AOAI.jpg)
 次に、モデルデプロイから、+作成をクリックし　gpt-35-turboをデプロイします。[モデルデプロイ名] をメモしておきます。
 ![OpenAI screen](OpenAI_Bot/docs/AOAI1.jpg)
-- Azure Cosmos DB(Core SQL AOI)を作成し、データベースを作成。
-データエクスプローラーから[New Database]で、作成しデータベース名をメモしておきます。
+- Azure Cosmos DB(Core SQL AOI)を作成し、データベースとコンテナを作成。
+データエクスプローラーから[New Database]で、作成したデータベース名をメモしておきます。続いて、[New Container]で、作成したコンテナ名をメモしておきます。
 ![CosmosDB screen](OpenAI_Bot/docs/cosmos1.jpg)
 次に、キーから[URI]と[プライマリキー]をメモしておきます。
 ![CosmosDB screen](OpenAI_Bot/docs/cosmos2.jpg)
@@ -59,7 +59,7 @@ Default Siteをクリックし、[秘密キー]をメモしておきます。(�
     CosmosDbEndpoint        :  メモしたAzure Cosmos DBの[URI]
     CosmosDbAuthKey         :  メモしたAzure Cosmos DBの[プライマリキー]
     CosmosDbDatabaseId      :  メモしたAzure Cosmos DBのデータベース名
-    ContainerId             :  Cosmos DBのコンテナ名。利用環境で作っていなくても、実行時に作成されます。例: BotState
+    ContainerId             :  メモしたAzure Cosmos DBのコンテナ名。例: BotState
     ```
 1. wwwrootからdefault.htmを開きます。メモしたAzure Bot　Direct Lineの[秘密キー]を、token: にセットします。
 ![VS screen](OpenAI_Bot/docs/vs1.jpg)
